@@ -19,7 +19,6 @@ import { configureStore } from './store/configureStore'
 
 import * as TodoActions from './todos/actions/todoActions'
 
-import AppBar from 'material-ui/AppBar';
 
 
 // Create a Store from the Configuration, we can pass a Initial State here
