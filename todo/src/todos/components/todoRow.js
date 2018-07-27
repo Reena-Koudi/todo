@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, {Component} from 'react';
 
 import {Button, Table} from 'semantic-ui-react'
@@ -15,7 +16,7 @@ const TodoRow = (props) => {
             <Table.Cell>{props.todo.description}</Table.Cell>
             <Table.Cell>{props.todo.date}</Table.Cell>
             <Table.Cell className="options">
-                {props.todo.status != 'done' && <Button className="option-buttons" color='green' onClick={props.completeTodo}>
+                {props.todo.status !== 'done' && <Button className="option-buttons" color='green' onClick={props.completeTodo}>
                     <i className="fa fa-check"></i>
                 </Button>}
                 <Button className="option-buttons" color='blue' onClick={props.startEditing}>
@@ -37,7 +38,7 @@ const getClassName = (props) => {
     ${props.todo.updating
         ? "updating"
         : ""}
-    ${props.todo.status == 'done'
+    ${props.todo.status === 'done'
             ? "done"
             : ""}
     ${props.todo.deleting

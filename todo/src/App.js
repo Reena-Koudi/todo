@@ -1,4 +1,6 @@
+// eslint-disable-next-line
 import React, { Component } from 'react';
+// eslint-disable-next-line
 import logo from './logo.svg';
 
 //Import the modified App.css

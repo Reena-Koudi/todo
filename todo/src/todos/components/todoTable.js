@@ -1,6 +1,7 @@
+// eslint-disable-next-line
 import React, {Component} from 'react';
 
-import {Button, Icon, Label, Menu, Table} from 'semantic-ui-react'
+import {Table} from 'semantic-ui-react'
 import TodoRow from './todoRow'
 import EditTodo from './editTodo'
 

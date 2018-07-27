@@ -80,7 +80,7 @@ const todo = (state, action) => {
     // If the mapped todo of the previous state matches with the new ID of the action, 
     // Only then proceed to the Reducer Switch case
 
-    if (state._id != (action._id || action.todo._id)) {
+    if (state._id !== (action._id || action.todo._id)) {
         return state;
     }
 

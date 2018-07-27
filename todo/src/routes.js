@@ -1,4 +1,6 @@
+// eslint-disable-next-line
 import React, { Component } from 'react';
+// eslint-disable-next-line
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 
 // The Todo Container Component

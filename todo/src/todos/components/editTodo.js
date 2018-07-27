@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+// eslint-disable-next-line
 import {Button, Icon, Label, Menu, Table} from 'semantic-ui-react'
 import {Input} from 'semantic-ui-react'
 

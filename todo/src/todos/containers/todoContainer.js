@@ -6,8 +6,9 @@ import { PropTypes } from 'prop-types'
 import TodoTable from '../components/todoTable';
 
 
-
+// eslint-disable-next-line
 export class TodoContainer extends Component {
+    // eslint-disable-next-line
     constructor(props) {
         super(props)
     }
