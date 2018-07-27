@@ -26,7 +26,7 @@ export function TodoListReducer(state = [], action) {
         //Read    
         case TodoActions.GET_TODOS_SUCCESS: {
             
-            return action.todos.data.data.docs;
+            return action.todos.data;
 
         }
         

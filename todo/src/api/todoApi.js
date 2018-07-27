@@ -2,7 +2,7 @@ import {HttpClient} from './httpClient'
 
 // This is the API. The backend root URL can be set from here.
 
-const API = 'http://localhost:3000/api'
+const API = 'http://localhost:3004'
 
 //Setting the todos URI
 
@@ -13,6 +13,7 @@ const TODO_API = `${API}/todos`
 
 //Create
 const createTodo = todo => {
+    console.log('create', todo);
     return HttpClient.post(TODO_API, todo)
 }
 
