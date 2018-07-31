@@ -8,7 +8,7 @@ import './App.css';
 
 // Import the Routes component, which contains our Route setup
 
-import { Routes } from './Routes'
+import { Routes } from './routes'
 
 
 // Provider component is a react-redux component for setting up the Redux Store
