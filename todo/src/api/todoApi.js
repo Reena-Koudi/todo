@@ -29,7 +29,7 @@ const updateTodo = todo => {
 
 //Delete
 const removeTodo = todo => {
-    return HttpClient.delete(`${TODO_API}/${todo._id}`)
+    return HttpClient.delete(`${TODO_API}/${todo.id}`)
 }
 
 

@@ -40,6 +40,7 @@ export class TodoContainer extends Component {
 
     //Delete
     deleteTodo = (todo) => {
+        console.log('delete', todo)
         this.props.actions.DeleteTodo(todo)
     }
 
