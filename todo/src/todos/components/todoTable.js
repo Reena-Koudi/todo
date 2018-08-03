@@ -34,8 +34,8 @@ const TodoTable = (props) => {
                         if (t.editing) {
                             return <EditTodo
                                 editTodo={props.editTodo}
-                                cancelEditing={e => props.cancelEditing(t._id)}
-                                key={t._id}
+                                cancelEditing={e => props.cancelEditing(t.id)}
+                                key={t.id}
                                 todo={t}/>
                         } else {
 
@@ -43,9 +43,9 @@ const TodoTable = (props) => {
 
                             return <TodoRow
                                 todo={t}
-                                key={t._id}
+                                key={t.id}
                                 completeTodo={e => props.completeTodo(t)}
-                                startEditing={e => props.startEditing(t._id)}
+                                startEditing={e => props.startEditing(t.id)}
                                 deleteTodo={e=> props.deleteTodo(t)}
                             />
                         }

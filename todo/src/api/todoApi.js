@@ -13,7 +13,6 @@ const TODO_API = `${API}/todos`
 
 //Create
 const createTodo = todo => {
-    console.log('create', todo);
     return HttpClient.post(TODO_API, todo)
 }
 
@@ -24,7 +23,8 @@ const getTodo = () => {
 
 //Update
 const updateTodo = todo => {
-    return HttpClient.put(TODO_API, todo)
+    
+    return HttpClient.put(`${TODO_API}/${todo.id}`)
 }
 
 //Delete

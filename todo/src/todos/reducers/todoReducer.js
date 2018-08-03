@@ -50,7 +50,7 @@ export function TodoListReducer(state = [], action) {
         }
         case TodoActions.UPDATE_TODO_SUCCESS: {
 
-            return state.map(s => todo(s, action))
+            return state.filter(s => todo(s, action))
 
         }
         
@@ -62,7 +62,7 @@ export function TodoListReducer(state = [], action) {
         }
         case TodoActions.DELETE_TODO_SUCCESS: {
 
-            return state.filter(s => todo(s, action))
+            return state.filter(s => s.id !== action.id)
 
         }
             
@@ -132,9 +132,11 @@ const todo = (state, action) => {
 
         case TodoActions.DELETE_TODO_SUCCESS:
             {
-                return state.filter(s => {
-                    console.log('s', s)
-                })
+                return {
+                    ...state,
+                    deleting: false
+                }
+                
             }
 
         default:

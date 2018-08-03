@@ -63,9 +63,9 @@ export function CreateTodoSuccess(todo){
 
 //Read
 export function GetTodos(){
-    return (dispactch, getState) => {
+    return (dispatch, getState) => {
         return TodoApi.getTodo().then(res => {
-            dispactch(GetTodoSuccess(res))
+            dispatch(GetTodoSuccess(res))
         })
     }
 }
@@ -79,16 +79,16 @@ export function GetTodoSuccess(todos){
 
 
 //Update
-export function StartEditing(_id) {
+export function StartEditing(id) {
     return {
         type: START_EDITING,
-        _id
+        id
     }
 }
-export function CancelEditing(_id) {
+export function CancelEditing(id) {
     return {
         type: CANCEL_EDITING,
-        _id
+        id
     }
 }
 
@@ -102,7 +102,7 @@ export function UpdateTodo(todo) {
             todo
         })
         TodoApi.updateTodo(todo).then(res => {
-            dispatch(UpdateTodoSuccess(res.data.data))
+            dispatch(UpdateTodoSuccess(res.data))
         })
     }
 }
@@ -110,7 +110,7 @@ export function UpdateTodoSuccess(todo) {
     return {
         type: UPDATE_TODO_SUCCESS,
         todo,
-        _id: todo._id
+        id: todo.id
     }
 }
 
@@ -123,7 +123,7 @@ export function DeleteTodo(todo) {
             todo
         })
         TodoApi.removeTodo(todo).then(res => {
-            if (res.status === 204) {
+            if (res.status === 200) {
                 dispatch(DeleteTodoSuccess(todo))
             }
         })
@@ -133,6 +133,6 @@ export function DeleteTodoSuccess(todo) {
     return {
         type: DELETE_TODO_SUCCESS,
         todo,
-        _id: todo._id
+        id: todo.id
     }
 }
