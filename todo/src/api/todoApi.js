@@ -1,4 +1,4 @@
-import {HttpClient} from './httpClient' 
+import { HttpClient } from './httpClient'
 
 // This is the API. The backend root URL can be set from here.
 
@@ -23,8 +23,8 @@ const getTodo = () => {
 
 //Update
 const updateTodo = todo => {
-    
-    return HttpClient.put(`${TODO_API}/${todo.id}`)
+    console.log('api', todo)
+    return HttpClient.put(`${TODO_API}/${todo.id}`, todo)
 }
 
 //Delete
@@ -35,6 +35,6 @@ const removeTodo = todo => {
 
 //Encapsulating in a JSON object
 
-const TodoApi = {createTodo, getTodo, updateTodo, removeTodo}
+const TodoApi = { createTodo, getTodo, updateTodo, removeTodo }
 
-export {TodoApi}
+export { TodoApi }

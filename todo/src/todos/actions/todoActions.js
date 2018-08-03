@@ -102,9 +102,10 @@ export function UpdateTodo(todo) {
             todo
         })
         TodoApi.updateTodo(todo).then(res => {
+            console.log('res', res)
             dispatch(UpdateTodoSuccess(res.data))
-        })
-    }
+            })
+        }
 }
 export function UpdateTodoSuccess(todo) {
     return {

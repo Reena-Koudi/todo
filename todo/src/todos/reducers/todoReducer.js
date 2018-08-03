@@ -36,6 +36,7 @@ export function TodoListReducer(state = [], action) {
         case TodoActions.START_EDITING: {
             
             return state.map(s => todo(s, action))
+            //return state.map(s => (s.id === action.id))
 
         }
         case TodoActions.CANCEL_EDITING: {
@@ -50,7 +51,7 @@ export function TodoListReducer(state = [], action) {
         }
         case TodoActions.UPDATE_TODO_SUCCESS: {
 
-            return state.filter(s => todo(s, action))
+            return state.map(s => todo(s, action))
 
         }
         
@@ -115,10 +116,15 @@ const todo = (state, action) => {
 
         case TodoActions.UPDATE_TODO_SUCCESS:
             {
+                console.log(state)
+                console.log('action', action)
                 return {
                     ...state,
                     ...action.todo,
-                    updating: false
+                    // title: action.data.changeNewTitle,
+                    // description: action.data.changeNewDescription,
+                    updating: false,
+                    editing: false
                 }
             }
 
